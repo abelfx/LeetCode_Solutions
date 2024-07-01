@@ -1,2 +1,4 @@
 # LeetCode_Solutions
-My leetCode accepted solutions will be present updated here, feel free to watch.
+My LeetCode journey in the mastery of problem solving,
+Efficient solutions for different kinds of problems are present here,
+Enjoy:)
