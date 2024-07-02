@@ -1,22 +1,16 @@
 class Solution {
     public int largestAltitude(int[] gain) {
-
         int sum = 0;
-        int max = -1;
+        int maxsum = 0;
+
         for(int i: gain){
-            if( max < sum){
-                max = sum;
-            }
             sum += i;
+            if(sum > maxsum){
+                maxsum = sum;
+            }
         }
 
-        if( max < sum){
-                max = sum;
-        }
-
-
-
-        return max;
+        return maxsum;
         
     }
 }
