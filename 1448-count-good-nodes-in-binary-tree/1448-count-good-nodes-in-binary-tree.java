@@ -14,29 +14,26 @@
  * }
  */
 class Solution {
-
-    // numberofgoodnodes variables
-    private int numNodes = 0;
+    
+    // initiate the number of good nodes variable
+    private int numNode = 0;
 
     public int goodNodes(TreeNode root) {
-
-        dfs(root, Integer.MIN_VALUE);
-
-        return numNodes;
         
+        dfs(root, Integer.MIN_VALUE);
+        return numNode;
     }
-
-    private void dfs(TreeNode node, int max){
-        if(max <= node.val){
-            numNodes++;
+    
+    private void dfs(TreeNode root, int max){
+        if(max <= root.val){
+            numNode++;
         }
-
-        if(node.right != null){
-            dfs(node.right, Math.max(max, node.val));
+        
+        if(root.right != null){
+            dfs(root.right, Math.max(max, root.val));
         }
-
-        if(node.left != null){
-            dfs(node.left, Math.max(max, node.val));
+        if(root.left != null){
+            dfs(root.left, Math.max(max, root.val));
         }
     }
 }
